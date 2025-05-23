@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.16.1+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>nr</BlastOutput_db>
+  <BlastOutput_query-ID>Query_5513579</BlastOutput_query-ID>
+  <BlastOutput_query-def>unnamed protein product</BlastOutput_query-def>
+  <BlastOutput_query-len>238</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>0.01</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_5513579</Iteration_query-ID>
+  <Iteration_query-def>unnamed protein product</Iteration_query-def>
+  <Iteration_query-len>238</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gb|AAB51347.1|</Hit_id>
+  <Hit_def>green fluorescent protein [synthetic construct]</Hit_def>
+  <Hit_accession>AAB51347</Hit_accession>
+  <Hit_len>247</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>487.649</Hsp_bit-score>
+      <Hsp_score>1254</Hsp_score>
+      <Hsp_evalue>2.6652e-173</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>247</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>233</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTFSYGVQCFSR+PDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>sp|P42212.1|</Hit_id>
+  <Hit_def>RecName: Full=Green fluorescent protein [Aequorea victoria] &gt;gb|AAA69675.1| green fluorescent protein [Cloning vector p35S-GFP] &gt;gb|AAB01173.1| green fluorescent protein [synthetic construct] &gt;gb|AAN86139.1| green fluorescence protein [Azotobacter vinelandii] &gt;gb|QPL17947.1| green fluorescent protein [Cloning vector pBGC] &gt;gb|AAA27721.1| green-fluorescent protein [Aequorea victoria]</Hit_def>
+  <Hit_accession>P42212</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>486.108</Hsp_bit-score>
+      <Hsp_score>1250</Hsp_score>
+      <Hsp_evalue>6.92261e-173</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>238</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>233</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTFSYGVQCFSR+PDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gb|AAL17988.1|</Hit_id>
+  <Hit_def>green fluorescent protein [Expression vector pNUS-GFPcH] &gt;gb|AAS44582.1| green florescent protein [Gene trapping vector pEU334AN] &gt;gb|AAS44585.1| green florescent protein [Gene trapping vector pEU334bn] &gt;gb|ASM41182.1| sGFP [Expression vector hbt::LIC-GFP] &gt;gb|QAA95700.1| GFP [synthetic construct] &gt;dbj|BAB72232.1| green fluorescent protein GFP [Cloning vector pRTHSP70-GFP]</Hit_def>
+  <Hit_accession>AAL17988</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>485.723</Hsp_bit-score>
+      <Hsp_score>1249</Hsp_score>
+      <Hsp_evalue>1.22479e-172</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>238</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFTYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTF+YGVQCFSR+PDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gb|AAD55053.1|</Hit_id>
+  <Hit_def>green fluorescent protein [Expression vector FRMwg]</Hit_def>
+  <Hit_accession>AAD55053</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>485.337</Hsp_bit-score>
+      <Hsp_score>1248</Hsp_score>
+      <Hsp_evalue>1.59377e-172</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>238</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>236</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKANFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTFSYGVQCFSR+PDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIK NFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gb|QPP46746.1|</Hit_id>
+  <Hit_def>green fluorescent protein [synthetic construct]</Hit_def>
+  <Hit_accession>QPP46746</Hit_accession>
+  <Hit_len>239</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>485.337</Hsp_bit-score>
+      <Hsp_score>1248</Hsp_score>
+      <Hsp_evalue>1.76563e-172</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>VSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>+SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTFSYGVQCFSR+PDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gb|UHA47092.1|</Hit_id>
+  <Hit_def>GFP [Transformation vector BAC attB_retrofitted_Sinv47D10_short] &gt;gb|UHA47095.1| GFP [Transformation vector BAC attB_retrofitted_Sinv47D10]</Hit_def>
+  <Hit_accession>UHA47092</Hit_accession>
+  <Hit_len>251</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>485.337</Hsp_bit-score>
+      <Hsp_score>1248</Hsp_score>
+      <Hsp_evalue>2.45349e-172</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>238</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>236</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFCYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTF YGVQCFSR+PDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>dbj|BAF90739.1|</Hit_id>
+  <Hit_def>green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH1] &gt;dbj|BAF90742.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH41] &gt;dbj|BAF90745.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH81] &gt;dbj|BAF90770.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL2-GFH1] &gt;dbj|BAF90773.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL2-GFH41] &gt;dbj|BAF90776.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL2-GFH81] &gt;dbj|BAF90800.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH1c] &gt;dbj|BAF90803.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH41c] &gt;dbj|BAF90806.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH81c] &gt;dbj|BAF90830.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL2-GFH1c] &gt;dbj|BAF90833.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL2-GFH41c] &gt;dbj|BAF90836.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL2-GFH81c] &gt;dbj|BAF90939.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH21] &gt;dbj|BAF90942.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH31] &gt;dbj|BAF90945.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH51] &gt;dbj|BAF90948.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH61] &gt;dbj|BAF90979.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH21c] &gt;dbj|BAF90982.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH31c] &gt;dbj|BAF90985.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH51c] &gt;dbj|BAF90988.1| green fluorescent protein, partial [Schizosaccharomyces pombe expression vector pDUAL-GFH61c]</Hit_def>
+  <Hit_accession>BAF90739</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>484.952</Hsp_bit-score>
+      <Hsp_score>1247</Hsp_score>
+      <Hsp_evalue>2.58283e-172</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>238</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>236</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFCYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTF YGVQCFSR+PDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gb|AAB47852.1|</Hit_id>
+  <Hit_def>green fluorescent protein [synthetic construct] &gt;gb|AAF06117.1| green fluorescent protein [Integration vector mini-CTX-GFP] &gt;gb|AAN86140.1| green fluorescence protein [Azotobacter vinelandii] &gt;gb|AAO20110.1| green fluorescent protein mut3 variant [Neisserial shuttle/reporter vector pMIDG100] &gt;gb|ACT56507.1| GFPmut3 [Pasteurellaceae shuttle vector pMC-Express] &gt;gb|ACT56510.1| GFPmut3 [Pasteurellaceae shuttle vector pMK-Express] &gt;gb|ACT56514.1| GFPmut3 [Pasteurellaceae tandem reporter plasmid pMC-Tandem] &gt;gb|UZC83375.1| GFP [Yeast tagging and expression vector pTS395] &gt;emb|CCQ77725.1| green fluorescent protein [Nicotiana benthamiana]</Hit_def>
+  <Hit_accession>AAB47852</Hit_accession>
+  <Hit_len>238</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>484.567</Hsp_bit-score>
+      <Hsp_score>1246</Hsp_score>
+      <Hsp_evalue>3.32425e-172</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>238</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKRHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTFSYGVQCFSR+PDHMK+HDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gb|AOC59748.1|</Hit_id>
+  <Hit_def>sGFP65T [Cloning vector GmScream9-pFLEV]</Hit_def>
+  <Hit_accession>AOC59748</Hit_accession>
+  <Hit_len>239</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>484.567</Hsp_bit-score>
+      <Hsp_score>1246</Hsp_score>
+      <Hsp_evalue>3.80593e-172</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>231</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>LSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFTYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>+SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTF+YGVQCFSR+PDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>dbj|BBG75469.1|</Hit_id>
+  <Hit_def>peroxisome-targeted synthetic green fluorescent protein [Gateway binary vector R4L1pGWB468] &gt;dbj|BBG75497.1| peroxisome-targeted synthetic green fluorescent protein [Gateway binary vector R4L1pGWB568] &gt;dbj|BBG75525.1| peroxisome-targeted synthetic green fluorescent protein [Gateway binary vector R4L1pGWB668] &gt;dbj|BBG75553.1| peroxisome-targeted synthetic green fluorescent protein [Gateway binary vector R4L1pGWB768] &gt;dbj|BBG75581.1| peroxisome-targeted synthetic green fluorescent protein [Gateway binary vector pGWB468] &gt;dbj|BBG75609.1| peroxisome-targeted synthetic green fluorescent protein [Gateway binary vector pGWB568] &gt;dbj|BBG75637.1| peroxisome-targeted synthetic green fluorescent protein [Gateway binary vector pGWB668] &gt;dbj|BBG75665.1| peroxisome-targeted synthetic green fluorescent protein [Gateway binary vector pGWB768]</Hit_def>
+  <Hit_accession>BBG75469</Hit_accession>
+  <Hit_len>242</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>484.182</Hsp_bit-score>
+      <Hsp_score>1245</Hsp_score>
+      <Hsp_evalue>5.28928e-172</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>231</Hsp_identity>
+      <Hsp_positive>237</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>238</Hsp_align-len>
+      <Hsp_qseq>MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFIYTTGKLPVPWPTLVTTFSYGVQCFSRFPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEIKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSIRLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_qseq>
+      <Hsp_hseq>VSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFTYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_hseq>
+      <Hsp_midline>+SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFI TTGKLPVPWPTLVTTF+YGVQCFSR+PDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAE+KFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGS++LADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>923124579</Statistics_db-num>
+      <Statistics_db-len>350713076168</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>
