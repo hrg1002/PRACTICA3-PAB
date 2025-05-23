@@ -48,3 +48,9 @@ with open("data/salida.xml") as archivo_blast:
             salida.write(f"Accession number: {mejor_hit.accession}\n")
         else:
             salida.write("No se encontraton\n")
+
+    from Bio import Entrez
+
+#
+Entrez.email="raul.ortegare@gmail.com"
+Entrez.api_key="90fba815d4e3b0c6891f4558feedd9ad5e09"
