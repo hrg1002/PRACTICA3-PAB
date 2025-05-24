@@ -1,4 +1,6 @@
-import sys
+import argparse
+from Bio.Blast import NCBIWWW, NCBIXML
+from Bio import SeqIO 
 from itertools import combinations
 import numpy as np
 from Bio import pairwise2
@@ -210,23 +212,72 @@ class Pipeline:
                 f.write(f"Comparacion: {id1} vs {id2}\n")
                 f.write(f"Alineamiento 1: {aligned1}\n")
                 f.write(f"Alineamiento 2: {aligned2}\n")
-                f.write(f"Puntuacio4n: {score}\n")
+                f.write(f"Puntuación: {score}\n")
                 f.write("-" * 80 + "\n")
-        print(f"Resultados guardados en {output_file}") 
+        #print(f"Resultados guardados en {output_file}") 
+    @staticmethod
+    def blast(seq, output_xml="data/salida.xml"):
+        '''
+        Ejecuta BLAST para obtener el accession number de la secuencia proporcionada.
+        Args:
+            seq (str): Secuencia a buscar.
+            output_xml (str): Ruta del archivo XML de salida.
+        Returns:
+            str: Accession number del mejor hit encontrado.  
+        '''
+        # Ejecutar BLAST
+        blast_result = NCBIWWW.qblast("blastp", "nr", seq, expect=0.01, hitlist_size=10)
+        with open(output_xml, "w") as archivo_blast:
+            archivo_blast.write(blast_result.read())
+        blast_result.close()
+
+        # Leer el resultado BLAST
+        with open(output_xml) as archivo_blast:
+            blast_record = NCBIXML.read(archivo_blast)
+            mejor_hit = None
+            mejor_score = 0
+            for hit in blast_record.alignments:
+                for hsp in hit.hsps:
+                    if hsp.expect < 0.01 and hsp.score > mejor_score:
+                        mejor_hit = hit
+                        mejor_score = hsp.score
+            if mejor_hit:
+                return mejor_hit.accession
+            else:
+                return None
 
 if __name__ == "__main__":
-    if len(sys.argv) < 4: # Comprobar argumentos
-        print("Uso: python Pipeline.py <archivo.fasta> <matriz_alineamiento> <output_file.txt>")
-        sys.exit(1) 
     
-    fasta_file = sys.argv[1] # Nombre del archivo fasta, el primer argumento
-    matrix_name = sys.argv[2] # Nombre de la matriz de alineamiento que queramos usar
-    output_file = sys.argv[3] # Nombre del fichero de salida
-    pipeline = Pipeline()
-    sequences=load_sequences(fasta_file, file_format="fasta", verbose=True)
+    parser = argparse.ArgumentParser(description='Pipeline de alineamiento de secuencias')
+    parser.add_argument('--input', '-i', type=str, required=True, help='Fichero con la secuencia de entrada (FASTA)')
+    parser.add_argument('--matrix', '-m', type=str, required=True, help='Nombre de la matriz de alineamiento')
+    parser.add_argument('--gap', '-g', type=float, default=-4.0, help='Penalización de gap')
+    parser.add_argument('--output', '-o', type=str, required=True, help='Fichero de salida')
+    parser.add_argument('--verbose', '-v', action='store_true', help='Modo detallado')
 
-    print(f"\nCargando archivo: {fasta_file}")
-    print(f"Usando matriz de alineamiento: {matrix_name}")
+    args = parser.parse_args()
+
+    pipeline = Pipeline()
+    pipeline.load_sequences(args.input, file_format="fasta", verbose=args.verbose)
+
+    print(f"\nCargando archivo: {args.input}")
+    print(f"Usando matriz de alineamiento: {args.matrix}")
+
+    sequences = pipeline.sequences
+    matrix_name = args.matrix
+    output_file = args.output
+
+    # Ejecutar BLAST sobre la primera secuencia y guardar el accession number
+    first_seq = sequences[0].seq
+    accession = Pipeline.blast(str(first_seq))
+
+    # Guardar el accession number en el archivo de salida antes de los alineamientos
+    # Guardar el accession number del mejor hit en un archivo de salida
+    with open("data/salida.txt", "w") as salida:
+        if accession:
+            salida.write(f"Accession number: {accession}\n")
+        else:
+            salida.write("No se encontró ningún hit significativo en BLAST\n")
 
     # Comparación de tiempos por combinación
     results = []
@@ -257,4 +308,6 @@ if __name__ == "__main__":
 
     # Guardado de los resultados
     pipeline.save_alignment_results(results,output_file)
+
+
 
