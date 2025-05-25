@@ -7,7 +7,7 @@ from Bio import pairwise2
 from Bio.Align.substitution_matrices import load
 from utils import *
 from itertools import combinations
-from Bio import Entrz
+from Bio import Entrez
 
 class Pipeline:
     def __init__(self):
