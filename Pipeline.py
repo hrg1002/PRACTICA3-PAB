@@ -9,6 +9,9 @@ from utils import *
 from itertools import combinations
 from Bio import Entrez
 
+CORREO = "raul.ortegare@gmail.com"
+TU_API = "90fba815d4e3b0c6891f4558feedd9ad5e09"
+
 class Pipeline:
     def __init__(self):
         """
@@ -26,92 +29,6 @@ class Pipeline:
             verbose (bool): Si se imprime un resumen de las secuencias.
         """
         self.sequences = load_sequences(file_path, file_format, verbose)
-
-    def extract_subsequences(self, start_motif, end_motif):
-        """
-        Extrae subsecuencias entre dos motivos.
-
-        Args:
-            start_motif (str): Motivo de inicio.
-            end_motif (str): Motivo de fin.
-
-        Returns:
-            dict: Diccionario con los identificadores de secuencia como claves y las subsecuencias extraídas como valores.
-        """
-        return extract_subsequences(self.sequences, start_motif, end_motif)
-
-    def gc_content(self, pos_start=None, pos_end=None):
-        """
-        Calcula el contenido de GC para cada secuencia.
-
-        Args:
-            pos_start (int): Posición de inicio del cálculo.
-            pos_end (int): Posición de fin del cálculo.
-
-        Returns:
-            list: Lista de tuplas con los IDs de las secuencias y su contenido de GC.
-        """
-        gc_contents = []
-        for seq in self.sequences:
-            gc_percent = gc_content(str(seq.seq), pos_start, pos_end)
-            gc_contents.append((seq.id, gc_percent))
-        return gc_contents
-    
-    def count_motifs(self, motifs, overlapping=False):
-        """
-        Cuenta la frecuencia de patrones de ADN específicos en las secuencias.
-
-        Args:
-            motifs (list): Lista de motivos a buscar.
-            overlapping (bool): Si se permite solapamiento en la búsqueda.
-
-        Returns:
-            dict: Diccionario con los IDs de las secuencias como claves y un diccionario de motivos como valores.
-        """
-        motif_counts = {}
-        for seq in self.sequences:
-            seq_id = seq.id
-            motif_counts[seq_id] = count_motifs(str(seq.seq), motifs, overlapping)
-        return motif_counts
-    
-    def identify_codons(self, table=11):
-        """
-        Identifica los codones de inicio y parada en las secuencias de mRNA.
-
-        Args:
-            table (int): Código de la tabla de codones.
-
-        Returns:
-            dict: Diccionario con los IDs de las secuencias como claves y una lista de codones como valores.
-        """
-        codons = []
-        for seq in self.sequences:
-            codons_in_seq = identify_codons(str(seq.seq), table)
-            codons.append((seq.id, codons_in_seq))
-        return codons
-    
-    def check_translations(self, peptide):
-        """
-        Comprueba si las secuencias de ADN se traducen correctamente a un péptido.
-        
-        Args:
-            motifs (list): Lista de motivos a buscar.
-            overlapping (bool): Si se permite solapamiento en la búsqueda.
-        
-        Returns:
-            dict: Diccionario con los IDs de las secuencias como claves y un diccionario de motivos como valores.
-        """
-        translations = []
-        for seq in self.sequences:
-            iguales, discrepancies = check_translation(str(seq.seq), peptide)
-            translations.append((seq.id, iguales, discrepancies))
-        return translations
-    
-    def save_sequences(self, output_file):
-        """
-        Guarda secuencias en un archivo.
-        """
-        return save_sequences(self.sequences, output_file)
 
     @staticmethod
     @contar_tiempo # Decorador para medir el tiempo de ejecución de smith_waterman
@@ -200,22 +117,6 @@ class Pipeline:
         alignments = pairwise2.align.globalds(seq1, seq2, load(matrix_name), gap_open, gap_extend)
         return alignments
     
-    def save_alignment_results(self, results, output_file):
-        """
-        Guarda los resultados de los alineamientos en un archivo.
-        Args:
-            results (list): lista con los resultados.
-            output_file (str): nombre del fichero de salida
-        """
-        with open(output_file, "w") as f:
-            for result in results:
-                id1, id2, aligned1, aligned2, score = result
-                f.write(f"Comparacion: {id1} vs {id2}\n")
-                f.write(f"Alineamiento 1: {aligned1}\n")
-                f.write(f"Alineamiento 2: {aligned2}\n")
-                f.write(f"Puntuación: {score}\n")
-                f.write("-" * 80 + "\n")
-        #print(f"Resultados guardados en {output_file}") 
     @staticmethod
     def blast(seq, output_xml="data/salida.xml"):
         '''
@@ -246,7 +147,7 @@ class Pipeline:
                 return mejor_hit.accession
             else:
                 return None
-
+@staticmethod
 def busqueda(identificador):
     """
     Busca un identificador en la base de datos de NCBI y devuelve la secuencia asociada.
@@ -257,8 +158,8 @@ def busqueda(identificador):
     Returns:
         
     """
-    Entrez.email="raul.ortegare@gmail.com"
-    Entrez.api_key="90fba815d4e3b0c6891f4558feedd9ad5e09"
+    Entrez.email = CORREO
+    Entrez.api_key = TU_API
     handle = Entrez.efetch(db = "protein", id = identificador, rettype = "gb", retmode = "text")
     record = SeqIO.read(handle, "genbank")
     handle.close()
