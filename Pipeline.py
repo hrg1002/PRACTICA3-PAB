@@ -7,6 +7,7 @@ from Bio import pairwise2
 from Bio.Align.substitution_matrices import load
 from utils import *
 from itertools import combinations
+from Bio import Entrz
 
 class Pipeline:
     def __init__(self):
@@ -246,6 +247,28 @@ class Pipeline:
             else:
                 return None
 
+def busqueda(identificador):
+    """
+    Busca un identificador en la base de datos de NCBI y devuelve la secuencia asociada.
+    
+    Args:
+        identificador (str): Identificador a buscar.
+    
+    Returns:
+        
+    """
+    Entrez.email="raul.ortegare@gmail.com"
+    Entrez.api_key="90fba815d4e3b0c6891f4558feedd9ad5e09"
+    handle = Entrez.efetch(db = "protein", id = identificador, rettype = "gb", retmode = "text")
+    record = SeqIO.read(handle, "genbank")
+    handle.close()
+    print(f"Accession number: {record.name}")
+    organismo = record.annotations.get("organism")
+    print(f"Organismo: {organismo}")
+
+    return record.seq
+
+
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(description='Pipeline de alineamiento de secuencias')
@@ -278,36 +301,14 @@ if __name__ == "__main__":
             salida.write(f"Accession number: {accession}\n")
         else:
             salida.write("No se encontró ningún hit significativo en BLAST\n")
+    # Buscar la secuencia y obtener la secuencia asociada
+    secuencia_buscada = busqueda(accession)
+    aligned1, aligned2, score_sw = Pipeline.smith_waterman(first_seq, secuencia_buscada, matrix_name, args.gap)
+    print("Alineamiento Smith-Waterman:")
+    print(aligned1)
+    print(aligned2)
+    print("Puntuación:", score_sw)
 
-    # Comparación de tiempos por combinación
-    results = []
-    for i, (seq1, seq2) in enumerate(combinations(sequences, 2), 1):
-        print(f"\n🔹 Comparando par {i}: {seq1.id} vs {seq2.id}")
-        # Nuestra implementación
-        aligned1, aligned2, score_sw = Pipeline.smith_waterman(str(seq1.seq), str(seq2.seq), matrix_name, -4)
-        print(f"Smith-Waterman → Puntuación: {score_sw}")
-        results.append((seq1.id, seq2.id, aligned1, aligned2, score_sw))
-        # Biopython
-        alignments = Pipeline.pairwise2_alignment(str(seq1.seq), str(seq2.seq), matrix_name)
-    
-    # Comparción de tiempos totales
-        # Nuestra implementación
-    start_time = time.time()
-    for seq1, seq2 in combinations(sequences, 2):
-        aligned1, aligned2, score_sw = Pipeline.smith_waterman.__wrapped__(str(seq1.seq), str(seq2.seq), matrix_name, -4)
-    end_time = time.time()
-    total_time = end_time - start_time
-    print(f"\n Tiempo total de ejecución para todas las combinaciones con nuestra implementación: {total_time:.4f} segundos")
-        # Usando Biopython
-    start_time_2 = time.time()
-    for seq1, seq2 in combinations(sequences, 2):
-        alignments = Pipeline.pairwise2_alignment.__wrapped__(str(seq1.seq), str(seq2.seq), matrix_name)
-    end_time_2 = time.time()
-    total_time_2 = end_time_2 - start_time_2
-    print(f"\n Tiempo total de ejecución para todas las combinaciones con la dunción de Biopython: {total_time_2:.4f} segundos")
-
-    # Guardado de los resultados
-    pipeline.save_alignment_results(results,output_file)
 
 
 
