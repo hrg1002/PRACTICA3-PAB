@@ -129,6 +129,7 @@ class Pipeline:
         '''
         # Ejecutar BLAST
         blast_result = NCBIWWW.qblast("blastp", "nr", seq, expect=0.01, hitlist_size=10)
+
         with open(output_xml, "w") as archivo_blast:
             archivo_blast.write(blast_result.read())
         blast_result.close()
@@ -147,16 +148,15 @@ class Pipeline:
                 return mejor_hit.accession
             else:
                 return None
+            
 @staticmethod
 def busqueda(identificador):
     """
     Busca un identificador en la base de datos de NCBI y devuelve la secuencia asociada.
-    
     Args:
         identificador (str): Identificador a buscar.
-    
     Returns:
-        
+        Seq: Secuencia asociada al identificador.
     """
     Entrez.email = CORREO
     Entrez.api_key = TU_API
@@ -196,14 +196,16 @@ if __name__ == "__main__":
     accession = Pipeline.blast(str(first_seq))
 
     # Guardar el accession number en el archivo de salida antes de los alineamientos
-    # Guardar el accession number del mejor hit en un archivo de salida
     with open("data/salida.txt", "w") as salida:
         if accession:
             salida.write(f"Accession number: {accession}\n")
         else:
             salida.write("No se encontró ningún hit significativo en BLAST\n")
+
     # Buscar la secuencia y obtener la secuencia asociada
     secuencia_buscada = busqueda(accession)
+
+    # Realizar alineamientos
     aligned1, aligned2, score_sw = Pipeline.smith_waterman(first_seq, secuencia_buscada, matrix_name, args.gap)
     print("Alineamiento Smith-Waterman:")
     print(aligned1)
